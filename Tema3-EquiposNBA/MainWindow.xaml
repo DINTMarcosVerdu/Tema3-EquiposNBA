@@ -6,8 +6,30 @@
         xmlns:local="clr-namespace:Tema3_EquiposNBA"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800" Icon="./assets/1490886333-37-basketball_82467.ico">
+    <Window.Resources>
+        <Style TargetType="TextBlock">
+            <Setter Property="HorizontalAlignment" Value="Center" ></Setter>
+            <Setter Property="FontSize" Value="30"></Setter>
+            <Setter Property="FontWeight" Value="Bold"></Setter>
+            <Setter Property="TextWrapping" Value="Wrap"></Setter>
+        </Style>
+        <Style TargetType="Border" x:Key="equipos">
+            <Setter Property="BorderBrush" Value="Black"></Setter>
+            <Setter Property="BorderThickness" Value="3"></Setter>
+            <Setter Property="CornerRadius" Value="3"></Setter>
+            <Setter Property="Margin" Value="5,10,5,5"></Setter>
+            
+        </Style>
+        <Style TargetType="WrapPanel">
+            <Setter Property="HorizontalAlignment" Value="Center"></Setter>
+        </Style>
+        <Style TargetType="Image">
+            <Setter Property="Width" Value="120"></Setter>
+        </Style>
+    </Window.Resources>
+    
     <StackPanel Margin="0,0,2,1">
-        <Border BorderBrush="Black" BorderThickness="3" CornerRadius="3" Margin="5,10,5,5">
+        <Border Style="{StaticResource equipos}">
 
             <StackPanel x:Name="team1">
                 <StackPanel.Background>
@@ -18,17 +40,17 @@
                     </LinearGradientBrush>
                 </StackPanel.Background>
 
-                <TextBlock HorizontalAlignment="Center" FontSize="30" FontWeight="Bold" TextWrapping="Wrap">Los Angeles Lakers</TextBlock>
-                <WrapPanel HorizontalAlignment="Center">
-                    <Image Source="./assets/23_lakers.png" Width="120"></Image>
-                    <Image Source="./assets/14_lakers.png" Width="120"></Image>
-                    <Image Source="./assets/39_lakers.png" Width="120"></Image>
-                    <Image Source="./assets/9_lakers.png" Width="120"></Image>
-                    <Image Source="./assets/3_lakers.png" Width="120"/>
+                <TextBlock>Los Angeles Lakers</TextBlock>
+                <WrapPanel>
+                    <Image Source="./assets/23_lakers.png"></Image>
+                    <Image Source="./assets/14_lakers.png"></Image>
+                    <Image Source="./assets/39_lakers.png"></Image>
+                    <Image Source="./assets/9_lakers.png"></Image>
+                    <Image Source="./assets/3_lakers.png"/>
                 </WrapPanel>
             </StackPanel>
         </Border>
-        <Border BorderBrush="Black" BorderThickness="3" CornerRadius="3" Margin="5,10,5,5">
+        <Border Style="{StaticResource equipos}" >
             <StackPanel x:Name="team2">
                 <StackPanel.Background>
                     <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
@@ -37,8 +59,8 @@
                     </LinearGradientBrush>
                 </StackPanel.Background>
 
-                <TextBlock HorizontalAlignment="Center" FontSize="30" FontWeight="Bold" TextWrapping="Wrap" Foreground="White">Miami Heats</TextBlock>
-                <WrapPanel HorizontalAlignment="Center">
+                <TextBlock Foreground="White">Miami Heats</TextBlock>
+                <WrapPanel >
                     <Image Source="./assets/13_heat.png" Width="120"></Image>
                     <Image Source="./assets/14_heat.png" Width="120"></Image>
                     <Image Source="./assets/22_heat.png" Width="120"></Image>
